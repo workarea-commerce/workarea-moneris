@@ -1,0 +1,1 @@
+Workarea::Moneris.auto_initialize_gateway

@@ -1,0 +1,23 @@
+module Workarea
+  decorate Payment::Purchase::CreditCardTest, with: :moneris do
+    def test_cancel_voids_with_the_authorization_from_the_transaction
+      transaction.response = ActiveMerchant::Billing::Response.new(
+        true,
+        'Message',
+        {},
+        { authorization: authorization }
+      )
+
+      operation = Payment::Purchase::CreditCard.new(tender, transaction)
+
+      original_void = operation.gateway.method(:void)
+      operation.gateway
+        .expects(:void)
+        .with(authorization, {:purchasecorrection => true})
+        .returns(original_void.call(authorization))
+
+      operation.cancel!
+    end
+
+  end
+end

@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><res_add_cc><pan>4111111111111111</pan><expdate>1901</expdate><crypt_type>7</crypt_type></res_add_cc></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:46 GMT
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b1635770607c75d5a619f4e657b18cd6ef128c609b2a5fa3595b263d5dbbd3657b;
+        Path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><response><receipt><DataKey>ROPaBnJEbxRJY29f8JJs0Kxx1</DataKey><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>001</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><Message>Successfully
+        registered CC details.</Message><TransTime>09:14:47</TransTime><TransDate>2018-04-11</TransDate><TransType>null</TransType><Complete>true</Complete><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><CorporateCard>null</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>true</ResSuccess><PaymentType>cc</PaymentType><IsVisaDebit>null</IsVisaDebit><ResolveData><cust_id></cust_id><phone></phone><email></email><note></note><crypt_type>7</crypt_type><masked_pan>4111***1111</masked_pan><expdate>1901</expdate></ResolveData></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:50 GMT
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><res_preauth_cc><data_key>ROPaBnJEbxRJY29f8JJs0Kxx1</data_key><order_id>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</order_id><amount>5.00</amount><crypt_type>7</crypt_type></res_preauth_cc></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:47 GMT
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b13079bed085bf987b7a36c2e91361e2879d4436473730b2f64f312a4c33e2c462;
+        Path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><response><receipt><DataKey>ROPaBnJEbxRJY29f8JJs0Kxx1</DataKey><ReceiptId>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</ReceiptId><ReferenceNum>660189810010030110</ReferenceNum><ResponseCode>027</ResponseCode><ISO>01</ISO><AuthCode>146884</AuthCode><Message>APPROVED           *                    =</Message><TransTime>09:14:48</TransTime><TransDate>2018-04-11</TransDate><TransType>01</TransType><Complete>true</Complete><TransAmount>5.00</TransAmount><CardType>V</CardType><TransID>56-0_11</TransID><TimedOut>false</TimedOut><CorporateCard>false</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>true</ResSuccess><PaymentType>cc</PaymentType><IsVisaDebit>false</IsVisaDebit><ResolveData><cust_id></cust_id><phone></phone><email></email><note></note><expdate>1901</expdate><masked_pan>4111***1111</masked_pan><crypt_type>7</crypt_type></ResolveData><HostId>1F8101332888449</HostId></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:50 GMT
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><completion><order_id>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</order_id><comp_amount>5.00</comp_amount><txn_number>56-0_11</txn_number><crypt_type>7</crypt_type></completion></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:48 GMT
+      Content-Length:
+      - '682'
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b1927ead618ae89abf4e1323712991776795e9d7fbb7dab96d2f87247f58add794;
+        Path=/
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" standalone="yes"?><response><receipt><ReceiptId>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</ReceiptId><ReferenceNum>660189810010030120</ReferenceNum><ResponseCode>027</ResponseCode><ISO>01</ISO><AuthCode>146884</AuthCode><TransTime>09:14:49</TransTime><TransDate>2018-04-11</TransDate><TransType>02</TransType><Complete>true</Complete><Message>APPROVED           *                    =</Message><TransAmount>5.00</TransAmount><CardType>V</CardType><TransID>57-1_11</TransID><TimedOut>false</TimedOut><BankTotals>null</BankTotals><Ticket>null</Ticket><HostId>1F8101332898457</HostId><IssuerId>null</IssuerId><IsVisaDebit>false</IsVisaDebit></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:52 GMT
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><refund><order_id>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</order_id><amount>5.00</amount><txn_number>57-1_11</txn_number><crypt_type>7</crypt_type></refund></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:49 GMT
+      Content-Length:
+      - '682'
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b1e4214c6ae76230b684b0bc2798c6731c0b35fa76e5bdab3dda65ecff31a0e472;
+        Path=/
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" standalone="yes"?><response><receipt><ReceiptId>5ace0a49987b4734c5b27c91_2018_04_11_09_14_50</ReceiptId><ReferenceNum>660189810010030130</ReferenceNum><ResponseCode>027</ResponseCode><ISO>01</ISO><AuthCode>030955</AuthCode><TransTime>09:14:50</TransTime><TransDate>2018-04-11</TransDate><TransType>04</TransType><Complete>true</Complete><Message>APPROVED           *                    =</Message><TransAmount>5.00</TransAmount><CardType>V</CardType><TransID>58-2_11</TransID><TimedOut>false</TimedOut><BankTotals>null</BankTotals><Ticket>null</Ticket><HostId>1F8101332908462</HostId><IssuerId>null</IssuerId><IsVisaDebit>false</IsVisaDebit></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:53 GMT
+recorded_with: VCR 2.9.3

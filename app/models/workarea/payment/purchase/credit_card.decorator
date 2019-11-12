@@ -1,0 +1,29 @@
+module Workarea
+  decorate Payment::Purchase::CreditCard, with: :moneris do
+    decorated do
+      include Payment::CreditCardData
+      delegate :address, to: :tender
+    end
+
+    def complete!
+      return unless Workarea::Payment::StoreCreditCard.new(tender, options).save!
+
+      transaction.response = handle_active_merchant_errors do
+        gateway.purchase(
+          transaction.amount.cents,
+          payment_source,
+          transaction_args
+        )
+      end
+    end
+
+    def cancel!
+      return unless transaction.success?
+
+      transaction.cancellation = handle_active_merchant_errors do
+        gateway.void(transaction.response.authorization, purchasecorrection: true)
+      end
+    end
+
+  end
+end

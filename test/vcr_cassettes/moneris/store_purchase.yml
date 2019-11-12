@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><res_add_cc><pan>4111111111111111</pan><expdate>1901</expdate><crypt_type>7</crypt_type></res_add_cc></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:40 GMT
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b1a94fabb8db98bc8149778e8b096ede1adc002264994ac84566809af6204bb5e1;
+        Path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><response><receipt><DataKey>tIq3kh4vANkEs5rplTgo5N1k1</DataKey><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>001</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><Message>Successfully
+        registered CC details.</Message><TransTime>09:14:40</TransTime><TransDate>2018-04-11</TransDate><TransType>null</TransType><Complete>true</Complete><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><CorporateCard>null</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>true</ResSuccess><PaymentType>cc</PaymentType><IsVisaDebit>null</IsVisaDebit><ResolveData><cust_id></cust_id><phone></phone><email></email><note></note><crypt_type>7</crypt_type><masked_pan>4111***1111</masked_pan><expdate>1901</expdate></ResolveData></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:43 GMT
+- request:
+    method: post
+    uri: https://esqa.moneris.com/gateway2/servlet/MpgRequest
+    body:
+      encoding: UTF-8
+      string: "<request><store_id>monca02501</store_id><api_token>YSI4CKbdvgSbr6is4JMZ</api_token><res_purchase_cc><data_key>tIq3kh4vANkEs5rplTgo5N1k1</data_key><order_id>5ace0a43987b4734c5b27c82_2018_04_11_09_14_43</order_id><amount>5.00</amount><crypt_type>7</crypt_type></res_purchase_cc></request>"
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Apr 2018 13:14:41 GMT
+      X-Ua-Compatible:
+      - IE=Edge
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - TS011902c9=01649737b1381f4d3f65fa4d367091c6c32c74e5b2df64f4455a4913b046ea85173ed47aac;
+        Path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><response><receipt><DataKey>tIq3kh4vANkEs5rplTgo5N1k1</DataKey><ReceiptId>5ace0a43987b4734c5b27c82_2018_04_11_09_14_43</ReceiptId><ReferenceNum>660189810010030070</ReferenceNum><ResponseCode>027</ResponseCode><ISO>01</ISO><AuthCode>638655</AuthCode><Message>APPROVED           *                    =</Message><TransTime>09:14:41</TransTime><TransDate>2018-04-11</TransDate><TransType>00</TransType><Complete>true</Complete><TransAmount>5.00</TransAmount><CardType>V</CardType><TransID>52-0_11</TransID><TimedOut>false</TimedOut><CorporateCard>false</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>true</ResSuccess><PaymentType>cc</PaymentType><IsVisaDebit>false</IsVisaDebit><ResolveData><cust_id></cust_id><phone></phone><email></email><note></note><expdate>1901</expdate><masked_pan>4111***1111</masked_pan><crypt_type>7</crypt_type></ResolveData><HostId>1F8101332818406</HostId></receipt></response>
+    http_version: 
+  recorded_at: Wed, 11 Apr 2018 13:14:44 GMT
+recorded_with: VCR 2.9.3
