@@ -1,8 +1,2 @@
 inherit_from:
   - https://raw.githubusercontent.com/workarea-commerce/workarea/master/.rubocop.yml
-
-AllCops:
-  Exclude:
-    - 'test/dummy/**/*'
-    - 'lib/workarea/payflow_pro.rb'
-    - 'lib/workarea/payflow_pro/**/*'
